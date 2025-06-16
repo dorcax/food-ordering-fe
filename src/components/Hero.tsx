@@ -12,8 +12,8 @@ const Hero = () => {
                     <h2 className='text-black font-bold text-[50px]'><span className='text-[4rem] capitalize  text-[rgb(88,148,3)] leading-16'>many <br /> resturants</span> <br />and offers in one place</h2>
 
                     <p className='font-medium text-xl'>Indulge in a culinary journey with our exquisite catering services, where every bite is a celebration of flavors and artistry.Elevate your event with our impeccable catering, where passion for food meets seamless service, creating unforgettable moments.</p>
-                    <div className='flex space-x-4 mt-8'>
-                        <Button className='w-[300px] py-6 text-lg  '> <MapPin /> Find near by resturants <MoveRight /></Button>
+                    <div className='flex items-center space-x-4 mt-8'>
+                        <Button className='w-[300px] py-6 text-lg  '> <MapPin className='size-6'/> Find near by resturants <MoveRight /></Button>
 
                         <Button className='w-[300px] py-6 bg-white border border-black  text-gray-600 text-lg hover:text-black hover:bg-[0px]'> <Star className='size-6' /> Select your food preferencies</Button>
                     </div>
@@ -29,7 +29,9 @@ const Hero = () => {
 
             </section>
 
-            <img src="./banner.png" alt="" className=' px-10  object-cover w-[calc(100%-50%)] h-auto py-6' />
+        <section className='flex-1 min-w-[50%] border'>
+                <img src="./banner.png" alt="" className=' px-10  object-cover  h-auto py-6' />
+        </section>
 
 
         </section>
