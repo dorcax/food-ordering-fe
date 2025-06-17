@@ -5,7 +5,7 @@ import { MapPin, MoveRight, Star } from 'lucide-react'
 const Hero = () => {
     return (
         <section className='flex items-center justify-around overflow-hidden'>
-            <section className='px-14 w-[50%] py-14'>
+            <section className='px-14 max-w-5xl py-14'>
                 <p className='bg-[rgb(88,148,3)] w-[300px] rounded-full py-3 px-4 text-white text-xl'> 🔥 Get 10% off  for first order</p>
 
                 <section className='mt-8'>
@@ -29,9 +29,10 @@ const Hero = () => {
 
             </section>
 
-        <section className='flex-1 min-w-[50%] border'>
-                <img src="./banner.png" alt="" className=' px-10  object-cover  h-auto py-6' />
-        </section>
+        <section className='flex-1 min-w-[50%] '>
+                <img src="https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091" alt="" className='w-full px-10  object-contain  h-auto max-h-[800px] py-6' />
+        </section> 
+           
 
 
         </section>
