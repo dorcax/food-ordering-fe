@@ -4,14 +4,14 @@ import { MapPin, MoveRight, Star } from 'lucide-react'
 
 const Hero = () => {
     return (
-        <section className='flex items-center justify-around overflow-hidden'>
-            <section className='px-14 max-w-5xl py-14'>
-                <p className='bg-[rgb(88,148,3)] w-[300px] rounded-full py-3 px-4 text-white text-xl'> 🔥 Get 10% off  for first order</p>
+        <section className='flex items-center justify-around'>
+            <section className='px-14 max-w-4xl py-14 '>
+                <p className='bg-[hsl(85,96%,30%)] w-[300px] rounded-full py-3 px-4 text-white text-xl'> 🔥 Get 10% off  for first order</p>
 
                 <section className='mt-8'>
                     <h2 className='text-black font-bold text-[50px]'><span className='text-[4rem] capitalize  text-[rgb(88,148,3)] leading-16'>many <br /> resturants</span> <br />and offers in one place</h2>
 
-                    <p className='font-medium text-xl'>Indulge in a culinary journey with our exquisite catering services, where every bite is a celebration of flavors and artistry.Elevate your event with our impeccable catering, where passion for food meets seamless service, creating unforgettable moments.</p>
+                    <p className='font-normal text-xl'>Indulge in a culinary journey with our exquisite catering services, where every bite is a celebration of flavors and artistry.Elevate your event with our impeccable catering, where passion for food meets seamless service, creating unforgettable moments.</p>
                     <div className='flex items-center space-x-4 mt-8'>
                         <Button className='w-[300px] py-6 text-lg  '> <MapPin className='size-6'/> Find near by resturants <MoveRight /></Button>
 
@@ -29,11 +29,15 @@ const Hero = () => {
 
             </section>
 
-        <section className='flex-1 min-w-[50%] '>
-                <img src="https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091" alt="" className='w-full px-10  object-contain  h-auto max-h-[800px] py-6' />
-        </section> 
-           
+          {/* Right image background */}
+            <section className='flex-1 h-auto min-h-screen bg-[url(https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091)] bg-center bg-no-repeat bg-cover bg-fixed'>
+            </section>
 
+ 
+  
+
+
+  
 
         </section>
     )

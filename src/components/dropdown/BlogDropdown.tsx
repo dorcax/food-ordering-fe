@@ -2,10 +2,10 @@ import React from 'react'
 
 const BlogDropdown = () => {
   return (
-    <div className='bg-white shadow-xl w-[250px] absolute top-[150%] left-0 mt-2 border-t border-t-black  opacity-0 group-hover:opacity-100 transition-all duration-500 '>
+    <div className='bg-white shadow-xl w-[250px] absolute top-[150%] left-0 mt-2 border-t border-t-black  transition-all duration-500  cursor-pointer'>
         <ul>
-            <li className=' p-3 capitalize text-lg font-medium'>article page</li>
-             <li className=' p-3 capitalize text-lg font-medium'>blog page</li>
+            <li className=' p-2 capitalize text-lg font-normal'>article page</li>
+             <li className='p-2 capitalize text-lg font-normal'>blog page</li>
         </ul>
     </div>
   )
