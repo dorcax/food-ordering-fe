@@ -13,8 +13,8 @@ const AppRoutes = () => {
         <Header/>
         <Hero/>
         <ProductMeal />
-        <Delivery/>
-        <Services/>
+        <Delivery />
+        <Services />
         <Footer/>
     </div>
   )

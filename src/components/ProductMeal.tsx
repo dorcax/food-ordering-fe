@@ -2,7 +2,7 @@ import { CarouselDemo } from '@/components/CarouselItems'
 import { meals } from '@/constant/data'
 import { Eye, Heart } from 'lucide-react'
 import { Button } from './ui/button'
-import FoodModal from './modal/foodModal'
+import FoodModal from './modal/FoodModal'
 import { useModal } from '@/context/ModalProvider'
 
 const ProductMeal = () => {
