@@ -27,7 +27,7 @@ const header = () => {
             <header className='flex justify-between items-center px-14 border-b py-4 shadow-5xl'>
                 <div className='flex space-x-4 items-centern w-full'>
                     <h2 className='text-black font-bold text-3xl'>catering</h2>
-                    <ul className='flex space-x-4 text-black cursor-pointer'>
+                    <ul className='flex space-x-4 text-black cursor-pointer z-50'>
                         <li className='capitalize text-lg font-semibold px-2 inline-flex items-center relative' onClick={() => handleToggleDropdown("allproducts")}>all products <span> <ChevronDown className={` ${openDropdown === 'allproducts' ? ' transition-transform rotate-180 duration-500' : ''}`} /></span>
 
                             {

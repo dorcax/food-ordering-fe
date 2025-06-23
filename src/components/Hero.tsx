@@ -4,8 +4,9 @@ import { MapPin, MoveRight, Star } from 'lucide-react'
 
 const Hero = () => {
     return (
-        <section className='flex items-center justify-around'>
-            <section className='px-14 max-w-4xl py-14 '>
+        <section className='py-10'>
+            <div className='flex items-center bg-[url(https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091)] bg-top-right [180%_50%] bg-no-repeat bg-[length:100%_120%]'>
+<section className='px-14 max-w-4xl py-14 '>
                 <p className='bg-[hsl(85,96%,30%)] w-[300px] rounded-full py-3 px-4 text-white text-xl'> 🔥 Get 10% off  for first order</p>
 
                 <section className='mt-8'>
@@ -28,10 +29,12 @@ const Hero = () => {
                 </div>
 
             </section>
+            </div>
+            
 
           {/* Right image background */}
-            <section className='flex-1 h-auto min-h-screen bg-[url(https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091)] bg-center bg-no-repeat bg-cover bg-fixed'>
-            </section>
+            {/* <section className='flex-1 h-auto min-h-screen  bg-fixedd bg-[url(https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091)] bg-[100%_200%] bg-no-repeat bg-[length:200%_100%]'>
+            </section> */}
 
  
   
