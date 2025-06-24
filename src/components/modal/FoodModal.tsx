@@ -10,6 +10,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Counter from '../Counter'
+import AddToCartButton from '../AddToCartButton'
 
 const FoodModal = () => {
   const { handleCloseModal } = useModal()
@@ -46,16 +48,11 @@ const FoodModal = () => {
               Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth</p>
             <span className='font-bold text-2xl'>$500.00 CAD</span>
             <div className='my-6 flex gap-2 '>
-              <Button className="w-[140px] bg-[rgb(88,148,3)] py-6 text-lg cursor-pointer">Add to Cart <ShoppingCart /> </Button>
-              <div className="flex items-center border border-gray-600 rounded-lg h-12 w-[150px] ">
-                <button className="flex-1 h-full flex items-center justify-center  text-black cursor-pointer">
-                  <Minus className='size-5' />
-                </button>
-                <span className='h-full flex items-center justify-center px-4 text-black font-medium'>1</span>
-                <button className="flex-1 h-full flex items-center justify-center  text-black cursor-pointer">
-                  <Plus className='size-5' />
-                </button>
-              </div>
+              
+      
+             <AddToCartButton className='w-[140px] bg-[rgb(88,148,3)] py-6 text-lg cursor-pointer' text='Add to Cart' icon={<ShoppingCart />}  />
+           
+              <Counter/>              
             </div>
           </div>
         </div>

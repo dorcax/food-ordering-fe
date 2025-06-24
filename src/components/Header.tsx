@@ -48,7 +48,7 @@ const header = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='flex items-center px-2 space-x-4'>
+                <div className='flex items-center  space-x-4'>
                     <div>
                         <Search />
                     </div>
