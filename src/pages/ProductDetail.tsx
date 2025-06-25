@@ -14,19 +14,20 @@ import {
 } from "@/components/ui/carousel"
 import { meals } from '@/constant/data'
 import { ArrowLeft, Heart, Pencil, ShoppingCart, Star } from 'lucide-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const ProductDetail = () => {
   const [activeThumbnail, setActiveThumbnail] = useState(0)
 
+
   const handleThumbnailClick = (index: number) => {
     setActiveThumbnail(index)
 
   }
 
-  
+
   return (
     <section className='relative w-full p-14 z-30'>
       <nav className='flex gap-3 items-center text-lg  font-medium mb-8'>
@@ -69,7 +70,8 @@ const ProductDetail = () => {
                 <div className="">
                   <Card className='bg-transparent border-none shadow-none p-0 '>
                     <CardContent className="flex  items-center justify-center p-0">
-                      <img src={meals[activeThumbnail]?.imageUrl} alt="product image" className='object-cover rounded-lg h-[450px] w-[95%] cursor-progress ' />
+                      <img src={meals[activeThumbnail]?.imageUrl} alt="product image" className='object-cover rounded-lg h-[450px] w-[95%]  cursor-pointer'
+                      />
                     </CardContent>
                   </Card>
                 </div>
@@ -89,8 +91,8 @@ const ProductDetail = () => {
             className="w-full max-w-xs "
           >
             <CarouselContent className="-mt-1 h-[200px]">
-              {meals.slice(0, 5).map((m,index) => (
-                <CarouselItem key={m.id} className="p-1 md:basis-1/5 cursor-pointer " onClick={() =>handleThumbnailClick(index)}>
+              {meals.slice(0, 5).map((m, index) => (
+                <CarouselItem key={m.id} className="p-1 md:basis-1/5 cursor-pointer " onClick={() => handleThumbnailClick(index)}>
                   <div className="p-1">
                     <Card className='bg-transparent border-none shadow-none p-0 '>
                       <CardContent className="flex  items-center justify-center p-0">
@@ -111,7 +113,7 @@ const ProductDetail = () => {
       <RecentlyViewedProduct />
 
       {/* customer review */}
-       <CustomerReview />
+      <CustomerReview />
       {/* food category */}
       <FoodCategory />
     </section>

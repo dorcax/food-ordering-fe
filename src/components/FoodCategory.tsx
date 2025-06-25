@@ -25,7 +25,7 @@ const FoodCategory = () => {
                         console.log(index)
 
                         return (
-                            <Button className={`bg-white border border-black text-black h-[70px] w-[150px] mx-4 text-xl px-2 hover:bg-white font-semibold ${activeCategory === meal.id ? 'text-[rgb(88,148,3)] border-[rgb(88,148,3)]' : ""}`} onClick={() => handleCategoryClick(meal.id, meal.category)} key={meal.id}>{meal.category} <span className={` text-white py-2 px-2 rounded-md ${activeCategory === meal.id ? "bg-[rgb(88,148,3)]" : "bg-black"}`}><ChevronRight className='size-6' /></span></Button>
+                            <Button className={`bg-white border border-black text-black h-[70px] w-[150px] mx-4 text-xl px-2 hover:bg-white font-semibold cursor-pointer ${activeCategory === meal.id ? 'text-[rgb(88,148,3)] border-[rgb(88,148,3)]' : ""}`} onClick={() => handleCategoryClick(meal.id, meal.category)} key={meal.id}>{meal.category} <span className={` text-white py-2 px-2 rounded-md ${activeCategory === meal.id ? "bg-[rgb(88,148,3)]" : "bg-black"}`}><ChevronRight className='size-6' /></span></Button>
                         )
                     })}
 
