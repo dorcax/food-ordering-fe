@@ -4,7 +4,7 @@ import { MapPin, MoveRight, Star } from 'lucide-react'
 
 const Hero = () => {
     return (
-        <section className='py-10'>
+        <section className='py-2'>
             <div className='flex items-center bg-[url(https://catering-workdo.myshopify.com/cdn/shop/files/banner-image.png?v=1685358091)] bg-top-right [180%_50%] bg-no-repeat bg-[length:100%_120%]'>
 <section className='px-14 max-w-4xl py-14 '>
                 <p className='bg-[hsl(85,96%,30%)] w-[300px] rounded-full py-3 px-4 text-white text-xl'> 🔥 Get 10% off  for first order</p>

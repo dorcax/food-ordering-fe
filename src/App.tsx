@@ -4,13 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Loader from './components/Loader'
 import './App.css';
 
-
-
 const Landing = lazy(() => import("./pages/Landing"))
 const LandingContent = lazy(() => import("./pages/LandingContent"))
 const CompareProduct = lazy(() => import("./pages/CompareProduct"))
 const WishList =lazy(()=>import("./pages/WhishList"))
 const ProductDetail =lazy(()=>import ("./pages/ProductDetail"))
+const ProductCollection= lazy(()=>import("./pages/ProductCollection"))
 const App = () => {
   // 88, 148, 3)
 
@@ -33,6 +32,10 @@ const App = () => {
         {
           path: "product-detail/:id",
           element: <ProductDetail />
+        },
+        {
+          path: "category/:id",
+          element: <ProductCollection />
         },
         
       ]
