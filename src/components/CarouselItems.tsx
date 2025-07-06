@@ -13,6 +13,7 @@ import { ArrowLeftRight, Clock9, Eye, Heart } from "lucide-react"
 import { useModal } from "@/context/ModalProvider"
 import { Link, useNavigate, useOutletContext } from "react-router-dom"
 import CartDetails from "./CartDetails"
+import FoodModal from "./modal/FoodModal"
 
 
 
@@ -49,7 +50,7 @@ export function CarouselDemo({ meals }: any) {
                     </Button>
                     <Button className="bg-[rgb(88,148,3)] w-[40px] h-[40px] cursor-pointer" onClick={() => handleCompareProduct(meal)}> <ArrowLeftRight className="size-6" />
                     </Button>
-                    <Button className="bg-[rgb(88,148,3)] w-[40px] h-[40px] cursor-pointer" onClick={()=>handleOpenModal()}><Eye className="size-6" />
+                    <Button className="bg-[rgb(88,148,3)] w-[40px] h-[40px] cursor-pointer" onClick={()=>handleOpenModal(<FoodModal/>)}><Eye className="size-6" />
                     </Button>
                   </div>
                   {/* stop watch */}

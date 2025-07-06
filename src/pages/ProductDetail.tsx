@@ -47,7 +47,7 @@ const ProductDetail = () => {
     <section className='relative w-full p-14 z-30'>
       <nav className='flex gap-3 items-center text-lg  font-medium mb-8'>
         <div className='size-12  rounded-full flex justify-center items-center border border-black'><Link to='/'><ArrowLeft className='size-4' /></Link></div>
-        <span className='text-sm'>Back to categories</span>
+        <span className='text-base'>Back to categories</span>
       </nav>
 
       <section className='grid grid-cols-12 items-start  gap-5 w-full'>
@@ -68,8 +68,8 @@ const ProductDetail = () => {
           </article>
           <article>
             <h2 className='text-5xl font-bold py-3 '>Chowmein</h2>
-            <p className='text-lg leading-relaxed '>noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth soups. They are commonly boiled or sautéed and served with sauces and meats or baked in casseroles.</p>
-            <Counter width='w-[140px] py-2.5' />
+            <p className='text-lg leading-relaxed mb-2'>noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth soups. They are commonly boiled or sautéed and served with sauces and meats or baked in casseroles.</p>
+            <Counter width='w-[140px] py-1.5' />
             <div className='flex space-x-6 items-center my-5'>
               <AddToCartButton className='w-[140px] bg-[rgb(88,148,3)] py-6 text-lg cursor-pointer' text='Add to Cart' icon={<ShoppingCart />} />
               <Button className='w-[140px] py-6 text-lg cursor-pointer'>Buy it now</Button>
@@ -102,7 +102,7 @@ const ProductDetail = () => {
             <CarouselNext className='right-4' onClick={()=>api?.scrollTo(current+1)} />
           </Carousel>
         </div>
-        <div className='col-span-1 border shadow-5xl h-[300px] overflow-y-auto'>
+        <div className='col-span-1  h-[300px] overflow-y-auto'>
           {meals.slice(0,5).map((meal,index)=>(
             <div className='my-3' key={meal.id} onClick={()=>api?.scrollTo(index)}>
                   <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[100px]  cursor-pointer'/>

@@ -16,7 +16,7 @@ import AddToCartButton from '../AddToCartButton'
 const FoodModal = () => {
   const { handleCloseModal } = useModal()
   return (
-    <div className='fixed inset-0 bg-[rgba(3,2,2,0.7)] flex items-center justify-center w-full z-50'>
+    <div className='fixed top-0 left-0 right-0 bottom-0 bg-[rgba(3,2,2,0.7)] flex items-center justify-center w-full z-50'>
       <div className='w-full max-w-7xl bg-gray-300  rounded-xl shadow-2xl px-1'>
         <div className="flex justify-end mx-4 mt-2">
           <X onClick={handleCloseModal} className='size-8 hover:text-black transition-colors' /> </div>
@@ -47,12 +47,12 @@ const FoodModal = () => {
             <p className='w-full max-w-xl leading-relaxed font-normal text-lg mb-4'>noodle, a cooked egg-and-flour paste prominent in European and
               Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth</p>
             <span className='font-bold text-2xl'>$500.00 CAD</span>
-            <div className='my-6 flex gap-2 '>
+            <div className='my-6 flex gap-4 '>
               
       
              <AddToCartButton className='w-[140px] bg-[rgb(88,148,3)] py-6 text-lg cursor-pointer' text='Add to Cart' icon={<ShoppingCart />}  />
            
-              <Counter/>              
+              <Counter width='w-[140px] py-3'/>              
             </div>
           </div>
         </div>

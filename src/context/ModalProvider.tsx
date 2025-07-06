@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, type ReactNode } from 'reac
 type ModalProps = {
     // popupContent: ReactNode
     isOpen: boolean
-    handleOpenModal: () => void,
+    handleOpenModal: (content:ReactNode) => void,
     handleCloseModal: () => void
     handleOpenDrawer: (content: ReactNode) => void
     handleCloseDrawer: () => void
@@ -17,8 +17,8 @@ const ModalProvider = ({ children }: { children: React.ReactNode }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
     const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false)
     const [popupContent, setPopupContent] = useState<ReactNode>(null);
-    const handleOpenModal = () => {
-        setPopupContent(null);
+    const handleOpenModal = (content:ReactNode) => {
+        setPopupContent(content);
         setIsOpen(true)
     }
     const handleCloseModal = () => {
