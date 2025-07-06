@@ -59,9 +59,9 @@ export function CarouselDemo({ meals }: any) {
                     {/* :{date.getMilliseconds()} */}
                   </div>
                   <div className="bg-gray-100 w-full py-5 px-4 rounded-b-xl ">
-                    <h2 className="text-2xl font-extrabold ">{meal?.title}</h2>
-                    <p className="text-xl font-bold mb-4 my-2">${meal?.price.toFixed(2)}AUD</p>
-                    <Button className="w-full bg-[rgb(88,148,3)] py-6 text-lg" onClick={()=>handleOpenDrawer(<CartDetails />)}>Add to Cart 
+                    <h2 className="text-xl font-extrabold ">{meal?.title}</h2>
+                    <p className="text-lg font-bold mb-4 my-2">${meal?.price.toFixed(2)}AUD</p>
+                    <Button className="w-full bg-[rgb(88,148,3)] py-6 text-base" onClick={()=>handleOpenDrawer(<CartDetails />)}>Add to Cart 
                     </Button>
                   </div>
 

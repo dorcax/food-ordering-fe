@@ -10,6 +10,8 @@ const CompareProduct = lazy(() => import("./pages/CompareProduct"))
 const WishList =lazy(()=>import("./pages/WhishList"))
 const ProductDetail =lazy(()=>import ("./pages/ProductDetail"))
 const ProductCollection= lazy(()=>import("./pages/ProductCollection"))
+const Register=lazy(()=>import("./pages/Register"))
+const Login=lazy(()=>import("./pages/Login"))
 const App = () => {
   // 88, 148, 3)
 
@@ -36,6 +38,14 @@ const App = () => {
         {
           path: "category/:id",
           element: <ProductCollection />
+        },
+        {
+          path: "login",
+          element: <Login />
+        },
+        {
+          path: "register",
+          element: <Register />
         },
         
       ]

@@ -16,6 +16,7 @@ import SearchBarModal from "./modal/SearchbarModal"
 import { Button } from "./ui/button"
 const header = () => {
     const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+    const [isOpen,setIsOpen] =useState<boolean>(false)
     const {handleOpenModal} =useModal()
 
     const handleToggleDropdown = (dropdown: string) => {
@@ -55,8 +56,15 @@ const header = () => {
                     <div onClick={()=>handleOpenModal(<SearchBarModal/>)} className="">
                         <Search />
                     </div>
-                    <div>
-                        <User />
+                    <div className="relative">
+                        <User  onClick={()=>setIsOpen(!isOpen)} />
+                      {isOpen &&  
+                            <ul className="absolute inset-0">
+                                <li>login</li>
+                                <li>create account</li>
+                                <li>WhishList</li>
+                            </ul>
+                    }
                     </div>
                     <div>
                         <Select>

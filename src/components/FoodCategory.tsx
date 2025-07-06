@@ -15,17 +15,17 @@ const FoodCategory = () => {
     return (
         <div>
             <section className='flex flex-col justify-center items-center'>
-                <h2 className='text-6xl font-extrabold  text-center'>
+                <h2 className='text-5xl font-extrabold  text-center'>
                     <span className='text-[rgb(88,148,3)]'>Catering with the</span> first class <br />
                     <span className='block'>service</span>
                 </h2>
-                <p className='max-w-3xl my-10  text-xl font-semibold'>Catering services can be tailored to accommodate a wide range of occasions, including weddings, corporate events, parties, conferences, and social gatherings.</p>
+                <p className='max-w-3xl my-10  text-xl'>Catering services can be tailored to accommodate a wide range of occasions, including weddings, corporate events, parties, conferences, and social gatherings.</p>
                 <section>
                     {meals.slice(0, 4).map((meal, index) => {
                         console.log(index)
 
                         return (
-                            <Button className={`bg-white border border-black text-black h-[70px] w-[150px] mx-4 text-xl px-2 hover:bg-white font-semibold cursor-pointer ${activeCategory === meal.id ? 'text-[rgb(88,148,3)] border-[rgb(88,148,3)]' : ""}`} onClick={() => handleCategoryClick(meal.id, meal.category)} key={meal.id}>{meal.category} <span className={` text-white py-2 px-2 rounded-md ${activeCategory === meal.id ? "bg-[rgb(88,148,3)]" : "bg-black"}`}><ChevronRight className='size-6' /></span></Button>
+                            <Button className={`bg-white border border-black text-black h-[60px] w-[150px] mx-4 text-lg px-2 hover:bg-white  cursor-pointer ${activeCategory === meal.id ? 'text-[rgb(88,148,3)] border-[rgb(88,148,3)]' : ""}`} onClick={() => handleCategoryClick(meal.id, meal.category)} key={meal.id}>{meal.category} <span className={` text-white py-2 px-2 rounded-md ${activeCategory === meal.id ? "bg-[rgb(88,148,3)]" : "bg-black"}`}><ChevronRight className='size-6' /></span></Button>
                         )
                     })}
 

@@ -15,7 +15,7 @@ const Delivery = () => {
   return (
     <section className='bg-[url("https://catering-workdo.myshopify.com/cdn/shop/files/category-back.jpg?v=1685364585")] bg-cover bg-center min-h-screen bg-no-repeat px-14 py-20'>
       <h2 className='text-3xl  text-[rgb(88,148,3)] capitalize mb-3 '>delivery</h2>
-      <h4 className='text-white text-6xl font-extrabold py-2'>The catering with <br /> <span className='text-[rgb(88,148,3)]'>the royal touch</span>
+      <h4 className='text-white text-5xl font-extrabold py-2'>The catering with <br /> <span className='text-[rgb(88,148,3)]'>the royal touch</span>
       </h4>
       <p className='text-white max-w-3xl text-base leading-relaxed py-6'>Experience a gastronomic adventure like no other with our bespoke catering, showcasing the perfect harmony of taste, presentation, and ambiance.Treat your guests to a sensory feast with our catering expertise, where each dish is crafted with precision and infused with culinary magic.</p>
       {/* 
@@ -29,7 +29,7 @@ const Delivery = () => {
               <span className='absolute top-6 left-8 bg-gray-400 rounded-full py-1.5 px-5 group-hover:bg-[rgb(88,148,3)]' >4 Items</span>
               <div className='border border-white  h-[90px] rounded-b-xl group-hover:border-[rgb(88,148,3)]'>
                 <div className='py-5 px-4 flex justify-between items-center'>
-                  <h2 className='  text-2xl font-extrabold group-hover:text-[rgb(88,148,3)]'>Cheeseburger</h2>
+                  <h2 className='  text-xl font-extrabold group-hover:text-[rgb(88,148,3)]'>Cheeseburger</h2>
                   <Button className='bg-gray-400 group-hover:bg-[rgb(88,148,3)]'> <ChevronRight className='size-5' /></Button>
                 </div>
               </div>

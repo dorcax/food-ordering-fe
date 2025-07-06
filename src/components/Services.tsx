@@ -26,12 +26,12 @@ type ServicesType ={
 const Services = () => {
  
     return (
-        <div className='pl-14 py-28'> <section className='flex justify-between items-center '>
+        <div className='pl-14 py-14'> <section className='flex justify-between items-center '>
             <section className='max-w-5xl  '>
                 <h2 className='text-4xl font-bold text-[rgb(88,148,3)]'>We cook it for you .</h2>
-                <h3 className='text-6xl font-extrabold py-6'>Making food  <br />more than <span className='text-[rgb(88,148,3)]'> just-food</span></h3>
-                <p className='text-xl font-semibold'>Catering is a service provided by professional food and beverage experts to meet the culinary needs of various events and gatherings.</p> 
-                <Button className='bg-[rgb(88,148,3)] py-6 w-[300px] text-lg my-8'><MapPin className='size-6'/> find nearby resturants <ArrowRight className='size-6'/></Button>
+                <h3 className='text-5xl font-bold py-6 leading-[60px]'>Making food  <br />more than <span className='text-[rgb(88,148,3)]'> just-food</span></h3>
+                <p className='text-lg'>Catering is a service provided by professional food and beverage experts to meet the culinary needs of various events and gatherings.</p> 
+                <Button className='bg-[rgb(88,148,3)] py-6 w-[300px] text-base my-8'><MapPin className='size-6'/> find nearby resturants <ArrowRight className='size-6'/></Button>
             </section>
             
                <section className='flex-1 min-w-[50%]'>
@@ -45,15 +45,15 @@ const Services = () => {
         </section>
             {/* filtering of meals */}
 
-            <div className='mt-40'>
+            <div className='mt-20'>
                <FoodCategory/>
             </div>
             {/* company services  */}
             <section className='flex justify-between gap-4 mt-24'>
                 <section>
-                    <h2 className='text-[rgb(88,148,3)] text-4xl font-extrabold'>Many Restaurants <br />  <span className='text-black  font-bold leading-24'>and offer in one place</span></h2>
-                    <p className='font-semibold text-xl max-w-xl'>Caterers work closely with clients to create a customized menu based on their preferences, dietary restrictions, and event requirements. The menu may include appetizers, main courses, side dishes, desserts, and beverages.</p>
-                     <Button className='bg-[rgb(88,148,3)] py-6 w-[300px] text-lg my-8'><MapPin className='size-6'/> find nearby resturants <ArrowRight className='size-6'/></Button>
+                    <h2 className='text-[rgb(88,148,3)] text-5xl font-bold'>Many Restaurants <br />  <span className='text-black  font-semibold leading-24'>and offer in one place</span></h2>
+                    <p className=' text-lg max-w-xl'>Caterers work closely with clients to create a customized menu based on their preferences, dietary restrictions, and event requirements. The menu may include appetizers, main courses, side dishes, desserts, and beverages.</p>
+                     <Button className='bg-[rgb(88,148,3)] py-6 w-[300px] text-base my-8'><MapPin className='size-6'/> find nearby resturants <ArrowRight className='size-6'/></Button>
                 </section>
                 <section>
                      <Carousel
@@ -71,9 +71,9 @@ const Services = () => {
                   <img src={services.imageUrl} alt=""  className='object-cover w-[60px] h-[60px] rounded-full ' />
                   {/* <p>{services.rating}</p> */}
                   <div className=' mt-14 w-full'>
-                    <h2 className='text-3xl py-2 font-extrabold text-[rgb(88,148,3)] '>{services.title}</h2>
-                    <p className='text-lg font-semibold'>{services.description}</p>
-                    <p className='text-xl font-bold py-3'>{services.name}</p>
+                    <h2 className='text-3xl py-2 font-bold text-[rgb(88,148,3)] '>{services.title}</h2>
+                    <p className='text-base'>{services.description}</p>
+                    <p className='text-xl font-semibold py-3'>{services.name}</p>
                   </div>
                    
                 </CardContent>
