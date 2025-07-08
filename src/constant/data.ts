@@ -20,7 +20,7 @@ export const meals = [
     imageUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
     title: "Cheeseburger",
     description: "Juicy beef patty with cheese, lettuce, and special sauce",
-    category: "American",
+    category: "Burgers",
     price: 9.99
   },
   {

@@ -6,7 +6,7 @@ import React from 'react'
 
 const LandingContent = () => {
   return (
-    <section>
+    <section className='overflow-hidden'>
         <Hero/>
         <ProductMeal/>
         <Delivery/>

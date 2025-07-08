@@ -11,14 +11,14 @@ const WishList = () => {
             <BackToHome text="wishlist" />
             {/* listing the selected product */}
             <section className='px-14 py-20'>
-                <h2 className='text-center text-4xl capitalize font-bold '>wishList({selectedMeal.length})</h2>
+                <h2 className='text-center text-3xl capitalize font-bold '>wishList({selectedMeal.length})</h2>
                 <table className=' w-full my-10'>
                     <thead className='bg-gray-300 '>
                         <tr>
-                            <th className=' text-left p-3 capitalize font-medium text-xl'>product</th>
-                            <th className=' text-left p-3 capitalize font-medium text-xl'>details</th>
-                            <th className=' text-left p-3 capitalize font-medium text-xl'>cart button</th>
-                            <th className=' text-left p-3 capitalize font-medium text-xl'>delete</th>
+                            <th className=' text-left p-3 capitalize  font-normal  text-xl'>product</th>
+                            <th className=' text-left p-3 capitalize  font-normal  text-xl'>details</th>
+                            <th className=' text-left p-3 capitalize  font-normal   text-xl'>cart button</th>
+                            <th className=' text-left p-3 capitalize  font-normal  text-xl'>delete</th>
                         </tr>
                     </thead>
                     <tbody className='relative'>
@@ -30,7 +30,7 @@ const WishList = () => {
                                 <td className='p-4  w-[600px]'>
 
                                     <h2 className='font-bold text-2xl py-2'>{meal.title}</h2>
-                                    <p className='text-lg font-normal mb-3'>{meal.description}</p>
+                                    <p className='text-base font-normal mb-3'>{meal.description}</p>
                                     <span className='text-2xl '>${meal.price.toFixed(2)}</span>
 
                                 </td>
