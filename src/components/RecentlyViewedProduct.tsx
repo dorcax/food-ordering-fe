@@ -29,7 +29,7 @@ export function RecentlyViewedProduct() {
  
   
   return (
-    <div className="my-6 md:my-20">
+    <div className="my-6 lg:my-20">
         <h2 className="text-3xl md:text-5xl font-bold py-2 capitalize">recently viewed products</h2>
         <Carousel className="w-full my-6">
       <CarouselContent>

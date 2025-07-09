@@ -1,12 +1,13 @@
 import BackToHome from '@/components/BackToHome'
 import FoodCategory from '@/components/FoodCategory'
 import { Button } from '@/components/ui/button'
-import { ArrowLeftRight, Eye, Heart, Minus, Plus } from 'lucide-react'
+import { ArrowLeftRight, Eye, Heart, Minus, Plus, Settings2 } from 'lucide-react'
 import React, { useState } from 'react'
 import type { MealProps } from './Landing'
 import { useOutletContext } from 'react-router-dom'
 import { useModal } from '@/context/ModalProvider'
 import CartDetails from '@/components/CartDetails'
+import FoodModal from '@/components/modal/FoodModal'
 
 
 const ProductCollection = () => {
@@ -21,11 +22,11 @@ const ProductCollection = () => {
   return (
     <section className='w-full min-h-screen overflow-hidden '>
       <BackToHome text="collection" />
-      <section className='flex justify-center  relative '>
-        <div className='w-[350px] h-screen border-r border-r-gray-400 '>
+      <section className='flex justify-center '>
+        <div className='w-[350px] h-screen hidden md:block border-r border-r-gray-400 '>
           <h2 className='p-6 font-semibold text-2xl'>Filters</h2>
-          <article className='p-4'>
-
+          <article className='p-4 relative'>
+            
             <div className='flex justify-between items-center cursor-pointer' onClick={handleChange}>
               <p className='font-medium text-xl'>Availability</p>
               <span>
@@ -58,12 +59,13 @@ const ProductCollection = () => {
           </article>
         </div>
         <div className='flex-1'>
-          <div className=' p-6 flex justify-between items-center'>
-            <p className='text-xl '>Home /
+          <div className='px-3 py-6 lg:p-6 flex sm:justify-between flex-end sm:items-center'>
+           <button className=' lg:hidden  border w-10 h-[40px] p-2 rounded-xl flex justify-center items-center'> <Settings2 className='size-8 '  /></button>
+            <p className='text-xl hidden  sm:block '>Home /
               Biggies Burger</p>
-            <div>
+            <div className=''>
               <span className='font-semibold text-base'>Sort by:</span>
-              <select className='border border-gray-600 w-[220px] p-2 mx-2 rounded-xl capitalize '>
+              <select className='border border-gray-600 w-[220px] p-2 mx-2  rounded-xl capitalize '>
                 <option value="">best selling</option>
                 <option value="">featured</option>
                 <option value="">price ,high to low</option>
@@ -72,17 +74,18 @@ const ProductCollection = () => {
                 <option value="">Date,New to Old</option>
               </select>
             </div>
+              
           </div>
-          <div className='grid grid-cols-3 gap-6   p-4  '>
+          <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-6 pt-6 pb-10 px-4 md:p-4  '>
             {Array(5).fill(null).map((_, index) => (
               <div className='group relative '>
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="" className="object-cover w-[400px] h-[160px] rounded-tr-xl rounded-tl-xl" />
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="" className="object-cover w-full h-[160px] rounded-tr-xl rounded-tl-xl" />
                 <div className="absolute top-2 right-3 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-all z-10  ">
-                  <Button className="bg-[hsl(85,96%,30%)] w-[30px] h-[30px] cursor-pointer" ><Heart className="size-6" />
+                  <Button className="bg-[hsl(85,96%,30%)] w-[30px] cursor-pointer" ><Heart className="size-6" />
                   </Button>
                   <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer"> <ArrowLeftRight className="size-6" />
                   </Button>
-                  <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleOpenModal()}><Eye className="size-6" />
+                  <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleOpenModal(<FoodModal/>)}><Eye className="size-6" />
                   </Button>
                 </div>
                 {/* collection name and price */}
@@ -97,8 +100,9 @@ const ProductCollection = () => {
           </div>
 
         </div>
-        <div className='border-b border-b-gray-400 absolute top-[10%] w-full ' />
+     
       </section>
+      <div className='border-b border-b-gray-400  w-full  absolute  top-[58%] md:top-[88%]' />
 
     </section>
   )

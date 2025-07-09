@@ -88,7 +88,7 @@ const header = () => {
                     </Button>
                     <span className="block lg:hidden"><ShoppingCart className="size-4 md:size-6" /></span>
                     {/* menu icon for mobile */}
-                    <span className="block lg:hidden">{toggleMenu ? <X onClick={() => setToggleMenu(false)} className="size-8 fixed left-32 md:left-[55%]  right-0 top-2 z-30 text-white" /> : <Menu className="size-6" onClick={() => setToggleMenu(prev => !prev)} />}</span>
+                    <button type="button" className="block lg:hidden ">{toggleMenu ? <X onClick={() => setToggleMenu(false)} className="size-8 fixed left-32 md:left-[50%]  right-0 top-2 z-50 text-white" /> : <Menu className="size-6" onClick={() => setToggleMenu(prev => !prev)} />}</button>
 
                     {toggleMenu && <SideBar/>}
 

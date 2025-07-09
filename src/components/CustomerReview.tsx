@@ -7,20 +7,20 @@ import { useState } from 'react'
 const CustomerReview = () => {
     const [review,setReview] =useState(false)
     return (
-        <section className='flex flex-col justify-center items-center my-10 '>
+        <section className='flex flex-col justify-center items-center  mt-20 md:my-10 '>
             <h2 className='font-bold text-4xl capitalize'> customer reviews</h2>
-            <article className='flex gap-4  items-center my-4'>
-                <div className=' mx-24'>
-                    <span className='flex space-x-2 mb-4'> {Array(5).fill(null).map((_, index) => (
+            <article className='flex flex-col lg:flex-row gap-4  items-center my-4'>
+                <div className='my-2 lg:my-0 mx-24'>
+                    <span className='flex space-x-2 items-center justify-center  mb-4'> {Array(5).fill(null).map((_, index) => (
                         <Star className='text-[rgb(88,148,3)] size-4 ' />
                     ))}</span>
                     <p className='text-xl '>Be the first to write a review </p>
                 </div>
-                <div className=' border border-r h-[80px]' />
+                <div className='hidden lg:block border border-r h-[80px]' />
                 {/*  buttonm */}
                 <AddToCartButton className='bg-[rgb(88,148,3)] capitalize text-lg py-6 w-[180px] mx-24 cursor-pointer' text={`${review ?"cancel review":"write review"}`}  onClick={()=>setReview((prev)=>!prev)}/>
             </article>
-            <div className=' border border-b-gray-50 w-full' />
+            <div className=' hidden lg:block border border-b-gray-50 w-full' />
             <section className={` my-5  transform ${review ?"w-full max-w-2xl border  rounded-xl px-4  translate-y-5 transition-all duration-500":"opacity-0 translate-y-2  h-0 overflow-hidden transition-all duration-300"}`}>
                 <h2 className='text-[rgb(88,148,3)] text-2xl text-center py-4 font-bold '>Write a review</h2>
                 <div className=''>

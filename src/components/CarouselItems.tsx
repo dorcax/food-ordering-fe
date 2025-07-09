@@ -60,7 +60,7 @@ export function CarouselDemo({ meals }: any) {
                     </Button>
                   </div>
                   {/* stop watch */}
-                  <div className="absolute top-[70px] w-[300px]  bg-[rgb(88,148,3)] py-1.5 flex items-center justify-center rounded-lg gap-2 text-white text-xl opacity-100 group-hover:opacity-0 transition-all duration-200 mx-3">
+                  <div className="absolute top-[70px] w-full  sm:w-[300px]  bg-[rgb(88,148,3)] py-1.5 flex items-center justify-center rounded-lg gap-2 text-white text-xl opacity-100 group-hover:opacity-0 transition-all duration-200 mx-3">
                     <Clock9 /> {date.getHours()}:{date.getMinutes()}:{date.getSeconds()}
                     {/* :{date.getMilliseconds()} */}
                   </div>

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Trash } from 'lucide-react'
 import { useOutletContext } from 'react-router-dom'
 import type { MealProps } from './Landing'
+import WishListSubList from './WishListSubList'
 
 const CompareProduct = () => {
     const { selectedMeal }: { selectedMeal: MealProps[] } = useOutletContext()
@@ -10,9 +11,15 @@ const CompareProduct = () => {
         <section>
           <BackToHome text="compare"/>
             {/* listing the selected product */}
-            <section className='px-14 py-20'>
+            <section className='px-3 lg:px-14 py-6'>
                 <h2 className='text-center text-4xl capitalize font-bold '>compare product</h2>
-                <table className=' w-full my-10'>
+                <table className=' w-full my-10 hidden md:table'>
+                     <colgroup>
+                        <col className="w-[300px]" />
+                        <col className="w-[40%]" />
+                        <col className="w-[200px]" />
+                        <col className="w-[200px]" />
+                    </colgroup>
                     <thead className='bg-gray-300 '>
                         <tr>
                             <th className=' text-left p-3 capitalize font-normal text-xl'>product</th>
@@ -42,6 +49,7 @@ const CompareProduct = () => {
 
                     </tbody>
                 </table>
+                <WishListSubList/>
             </section>
         </section>
     )

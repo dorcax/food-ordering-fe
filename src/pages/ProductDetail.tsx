@@ -44,18 +44,15 @@ const ProductDetail = () => {
 
 
   return (
-    <section className='relative w-full p-3 xl:p-14 z-30'>
-     
-
+    <section className='relative w-full px-3 py-10 xl:p-14 z-30'>
       <section className='grid grid-cols-1 md:grid-cols-12  items-start  gap-5 w-full'>
-
-        <div className='md:col-span-5 order-3 md:order-1'>
-           <nav className='flex gap-3 items-center text-lg  font-medium mb-8'>
+        <div className=' sm:col-span-12 lg:col-span-5 order-3 md:order-3 lg:order-1'>
+           <nav className='flex gap-3 items-center text-lg  font-medium mb-2  md:mb-8'>
         <div className='size-12  rounded-full flex justify-center items-center border border-black'><Link to='/'><ArrowLeft className='size-4' /></Link></div>
         <span className='text-base'>Back to categories</span>
       </nav>
-          <article className='flex justify-between flex-wrap items-center mb-3'>
-            <h2 className='capitalize  text-lg'>China Town Chinese Food</h2>
+          <article className='flex justify-between flex-wrap  items-center md:mb-3'>
+            <h2 className='capitalize text-sm  md:text-lg'>China Town Chinese Food</h2>
             <div className='cursor-pointer  flex flex-wrap space-x-2 items-center'>
               {
                 Array(5).fill(null).map((_, index) => (
@@ -63,14 +60,14 @@ const ProductDetail = () => {
                   <Star key={index} className='size-4 text-[rgb(88,148,3)]' />
                 ))
               }
-              <span className='flex items-center capitalize text-base font-medium  gap-2'><Pencil className=' size-4' />  write a review </span>
+              <span className='flex items-center capitalize text-sm md:text-base font-medium  gap-2'><Pencil className=' size-4' />  write a review </span>
 
             </div>
             <Button className="bg-[hsl(85,96%,30%)] w-[40px] h-[40px] cursor-pointer " ><Heart className="size-6" /></Button>
           </article>
           <article>
-            <h2 className='text-5xl font-bold py-3 '>Chowmein</h2>
-            <p className='text-lg leading-relaxed mb-2'>noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth soups. They are commonly boiled or sautéed and served with sauces and meats or baked in casseroles.</p>
+            <h2 className='text-5xl font-bold  py-3 '>Chowmein</h2>
+            <p className='text-base md:text-lg leading-relaxed mb-4'>noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form. Noodles are commonly used to add body and flavour to broth soups. They are commonly boiled or sautéed and served with sauces and meats or baked in casseroles.</p>
             <Counter width='w-[140px] py-1.5' />
             <div className='flex space-x-6 items-center my-5'>
               <AddToCartButton className='w-[140px] bg-[rgb(88,148,3)] py-6 text-lg cursor-pointer' text='Add to Cart' icon={<ShoppingCart />} />
@@ -79,8 +76,11 @@ const ProductDetail = () => {
 
           </article>
         </div>
-        <div className='md:col-span-6 order-1 pt-6 md:py-0 md:order-2 '>
-          <Carousel setApi={setApi} className="w-full max-w-3xl cursor-pointer">
+        {/* {image section} */}
+
+        <div className=' order-1 lg:order-2 sm:col-span-12 lg:col-span-7 flex flex-col md:flex-row pt-6 md:py-0 md:order-2 md:gap-4 md:mb-4'>
+        <div className='w-full md:col-span-10 lg:col-span-6 '>
+            <Carousel setApi={setApi} className="w-full max-w-3xl cursor-pointer">
             <CarouselContent>
               {/* {meals.slice(0,5).map((m) => ( */}
               {meals.slice(0, 5).map((meal) => (
@@ -104,10 +104,10 @@ const ProductDetail = () => {
             <CarouselNext className='right-4' onClick={()=>api?.scrollTo(current+1)} />
           </Carousel>
         </div>
-        <div className='md:col-span-1 order-2 md:order-3  md:h-[300px] flex md:flex-col gap-2 '>
+            <div className='col-span-1 order-2 md:order-2 w-[420px] md:w-1/5  md:h-[400px] flex  sm:flex-row md:flex-col gap-6 md:gap-4 my-4 lg:my-0   overflow-auto mx-auto'>
           {meals.slice(0,5).map((meal,index)=>(
-            <div className='my-3 ' key={meal.id} onClick={()=>api?.scrollTo(index)}>
-                  <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[100px] w-full  cursor-pointer'/>
+            <div className='md:my-0 my-3 shrink-0 ' key={meal.id} onClick={()=>api?.scrollTo(index)}>
+                  <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[140px] w-[120px] cursor-pointer'/>
                 </div>
           ))}
           {/* <Carousel
@@ -135,6 +135,8 @@ const ProductDetail = () => {
           </Carousel> */}
 
         </div>
+        </div>
+    
       </section>
       {/* recently viewed product */}
       <RecentlyViewedProduct />
