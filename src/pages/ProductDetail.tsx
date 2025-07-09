@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/carousel"
 import { meals } from '@/constant/data'
 import { ArrowLeft, Heart, Pencil, ShoppingCart, Star } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 

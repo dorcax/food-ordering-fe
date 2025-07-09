@@ -2,12 +2,11 @@ import {
     Sheet,
     SheetContent,
     SheetDescription,
-    SheetHeader,
-    SheetTitle
+    SheetHeader
 } from "@/components/ui/sheet"
 import { useModal } from '@/context/ModalProvider'
 import { type ReactNode } from 'react'
-const CartDrawer = ({children,title}:{children:ReactNode,title:string}) => {
+const CartDrawer = ({children}:{children:ReactNode}) => {
     const {handleCloseDrawer,isDrawerOpen} =useModal()
     return (
         <div>
@@ -15,7 +14,7 @@ const CartDrawer = ({children,title}:{children:ReactNode,title:string}) => {
               
                 <SheetContent>
                     <SheetHeader>
-                        {/* <SheetTitle>{title}</SheetTitle> */}
+                      
                         <SheetDescription>
                             {children}
                         </SheetDescription>

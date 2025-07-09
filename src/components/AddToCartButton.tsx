@@ -1,5 +1,4 @@
-import { ShoppingCart } from 'lucide-react'
-import React, { type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import { Button } from './ui/button'
 
 type AddToCartButtonProps ={

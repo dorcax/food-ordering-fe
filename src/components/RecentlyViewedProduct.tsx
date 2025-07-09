@@ -1,29 +1,16 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Link } from "react-router-dom"
-import { Button } from "./ui/button"
 import { meals } from "@/constant/data"
+import { Link } from "react-router-dom"
 
-type MealProps = {
-  imageUrl: string
-  title: string
-  price: number
-  description: string
-  category: string
-  id: string
 
-}
-interface MealCarousel {
-  meal: MealProps[]
-
-}
 export function RecentlyViewedProduct() {
   
  

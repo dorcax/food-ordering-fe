@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Outlet, useNavigate } from "react-router-dom"
 
 

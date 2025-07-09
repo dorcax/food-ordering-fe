@@ -1,13 +1,10 @@
 import BackToHome from '@/components/BackToHome'
-import FoodCategory from '@/components/FoodCategory'
-import { Button } from '@/components/ui/button'
-import { ArrowLeftRight, Eye, Heart, Minus, Plus, Settings2 } from 'lucide-react'
-import React, { useState } from 'react'
-import type { MealProps } from './Landing'
-import { useOutletContext } from 'react-router-dom'
-import { useModal } from '@/context/ModalProvider'
 import CartDetails from '@/components/CartDetails'
 import FoodModal from '@/components/modal/FoodModal'
+import { Button } from '@/components/ui/button'
+import { useModal } from '@/context/ModalProvider'
+import { ArrowLeftRight, Eye, Heart, Minus, Plus, Settings2 } from 'lucide-react'
+import { useState } from 'react'
 
 
 const ProductCollection = () => {
@@ -78,7 +75,7 @@ const ProductCollection = () => {
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-6 pt-6 pb-10 px-4 md:p-4  '>
             {Array(5).fill(null).map((_, index) => (
-              <div className='group relative '>
+              <div className='group relative ' key={index}>
                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="" className="object-cover w-full h-[160px] rounded-tr-xl rounded-tl-xl" />
                 <div className="absolute top-2 right-3 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-all z-10  ">
                   <Button className="bg-[hsl(85,96%,30%)] w-[30px] cursor-pointer" ><Heart className="size-6" />

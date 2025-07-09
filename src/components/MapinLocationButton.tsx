@@ -1,6 +1,5 @@
-import React from 'react'
-import { Button } from './ui/button'
 import { ArrowRight, MapPin } from 'lucide-react'
+import { Button } from './ui/button'
 
 const MapinLocationButton = ({className}:{className:string}) => {
   return (

@@ -1,6 +1,5 @@
-import React from 'react'
-import { Button } from './ui/button'
 import { MapPin, MoveRight, Star } from 'lucide-react'
+import { Button } from './ui/button'
 
 const Hero = () => {
     return (

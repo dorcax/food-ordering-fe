@@ -1,7 +1,3 @@
-import { meals } from '@/constant/data'
-import { ArrowRight, ChevronRight, MapPin } from 'lucide-react'
-import { useState } from 'react'
-import { Button } from './ui/button'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -11,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { cateringServices } from '@/constant/cateringServices'
+import { useState } from 'react'
 import FoodCategory from './FoodCategory'
 import MapinLocationButton from './MapinLocationButton'
 

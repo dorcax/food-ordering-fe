@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -7,9 +5,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Button } from "./ui/button"
-import { ArrowLeftRight, ChevronRight, Clock9, Eye, Heart } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { Link } from 'react-router-dom'
+import { Button } from "./ui/button"
 const Delivery = () => {
   // const [activeItem,setActiveItem] =useState<number | null>(null)
   return (

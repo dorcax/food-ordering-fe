@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -8,12 +7,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Button } from "./ui/button"
-import { ArrowLeftRight, Clock9, Eye, Heart, ShoppingBasket } from "lucide-react"
 import { useModal } from "@/context/ModalProvider"
-import { Link, useNavigate, useOutletContext } from "react-router-dom"
+import { ArrowLeftRight, Clock9, Eye, Heart, ShoppingBasket } from "lucide-react"
+import { Link, useOutletContext } from "react-router-dom"
 import CartDetails from "./CartDetails"
 import FoodModal from "./modal/FoodModal"
+import { Button } from "./ui/button"
 
 
 
@@ -26,10 +25,7 @@ type MealProps = {
   id: string
 
 }
-interface MealCarousel {
-  meal: MealProps[]
 
-}
 export function CarouselDemo({ meals }: any) {
   const date = new Date()
   const { handleOpenModal, handleOpenDrawer } = useModal()

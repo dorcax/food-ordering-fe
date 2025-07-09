@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 import AllProductDropdown from "./dropdown/AllProductDropdown"
 import BlogDropdown from "./dropdown/BlogDropdown"
 import PagesDropdown from "./dropdown/PagesDropdown"
 import ShopAllDropdown from "./dropdown/ShopAllDropdown"
-import { ChevronDown } from 'lucide-react'
 const navItems = [
     { label: "all products", key: "allproducts", Dropdown: AllProductDropdown },
     { label: "shop all", key: "all-shop", Dropdown: ShopAllDropdown },

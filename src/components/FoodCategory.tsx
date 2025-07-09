@@ -1,7 +1,7 @@
 import { meals } from '@/constant/data'
-import React, { useState } from 'react'
-import { Button } from './ui/button'
 import { ChevronRight } from 'lucide-react'
+import { useState } from 'react'
+import { Button } from './ui/button'
 
 const FoodCategory = () => {
     const [selectCategory, setSelectCategory] = useState<string>("Italian")

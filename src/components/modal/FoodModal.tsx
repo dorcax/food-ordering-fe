@@ -1,7 +1,3 @@
-import { Minus, Plus, ShoppingCart, X } from 'lucide-react'
-import React from 'react'
-import { Button } from '../ui/button'
-import { useModal } from '@/context/ModalProvider'
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -10,8 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Counter from '../Counter'
+import { useModal } from '@/context/ModalProvider'
+import { ShoppingCart, X } from 'lucide-react'
 import AddToCartButton from '../AddToCartButton'
+import Counter from '../Counter'
 
 const FoodModal = () => {
   const { handleCloseModal } = useModal()

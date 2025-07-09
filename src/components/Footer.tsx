@@ -1,7 +1,6 @@
-import React from 'react'
-import { Input } from './ui/input'
-import { Button } from './ui/button'
 import { ArrowUpRight } from 'lucide-react'
+import { Button } from './ui/button'
+import { Input } from './ui/input'
 
 const Footer = () => {
     return (

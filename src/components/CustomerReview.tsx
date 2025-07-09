@@ -12,7 +12,9 @@ const CustomerReview = () => {
             <article className='flex flex-col lg:flex-row gap-4  items-center my-4'>
                 <div className='my-2 lg:my-0 mx-24'>
                     <span className='flex space-x-2 items-center justify-center  mb-4'> {Array(5).fill(null).map((_, index) => (
-                        <Star className='text-[rgb(88,148,3)] size-4 ' />
+                        <Star className='text-[rgb(88,148,3)] size-4 '  key={index
+
+                        }/>
                     ))}</span>
                     <p className='text-xl '>Be the first to write a review </p>
                 </div>
@@ -26,7 +28,7 @@ const CustomerReview = () => {
                 <div className=''>
                     <p className='text-[rgb(88,148,3)] text-lg py-4'>Rating </p>
                     <span className='flex space-x-2'> {Array(5).fill(null).map((_, index) => (
-                        <Star className='text-[rgb(88,148,3)] size-4 ' />
+                        <Star className='text-[rgb(88,148,3)] size-4 '  key={index}/>
                     ))}</span>
 
                 </div>

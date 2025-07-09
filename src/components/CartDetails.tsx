@@ -1,11 +1,10 @@
-import React from 'react'
+import { useModal } from '@/context/ModalProvider'
+import { Trash, X } from 'lucide-react'
 import Counter from './Counter'
 import { Button } from './ui/button'
-import { Trash, X } from 'lucide-react'
-import { useModal } from '@/context/ModalProvider'
 
 const CartDetails = () => {
-    const { handleCloseDrawer ,isDrawerOpen} = useModal()
+    const { handleCloseDrawer} = useModal()
     return (
         <section className='fixed inset-0 bg-[rgba(0,0,0,0.6)] flex z-50 transition-transform duration-500 ease-in-out'>
 
@@ -21,7 +20,7 @@ const CartDetails = () => {
                     {/* main cart items */}
                     <section className='px-4 mt-[80px] py-4 space-y-4 overflow-y-auto'>
                         {Array(6).fill(null).map((_, index) => (
-                            <div className='border rounded-md  p-3 flex   space-x-4 '>
+                            <div className='border rounded-md  p-3 flex   space-x-4 ' key={index}>
                                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="" className='w-[90px] h-[120px] rounded-2xl object-cover ' />
                                 <div className=' w-full '>
                                     <h2 className='text-[rgb(88,148,3)] text-base font-medium pb-4 cursor-pointer'>Pasta Fagioli al Forno</h2>

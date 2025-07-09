@@ -1,4 +1,3 @@
-import React from 'react'
 import { Minus, Plus } from "lucide-react";
 const Counter = ({width}:{width:string}) => {
     return (
