@@ -57,7 +57,7 @@ const CustomerReview = () => {
                     </div>
                     <p className='mb-6 text-lg leading-relaxed'>How we use your data: We’ll only contact you about the review you left, and only if necessary. By submitting your review, you agree to Judge.me’s terms, privacy and content policies</p>
 
-                    <div className='flex space-x-6 items-center my-10'>
+                    <div className='flex  items-center gap-4 flex-wrap my-10'>
                         <AddToCartButton className="w-[200px] py-6 bg-white border-[3px] text-[rgb(88,148,3)] hover:bg-white border-[rgb(88,148,3)] text-xl font-semibold capitalize cursor-pointer" text="cancel review " />
                         <AddToCartButton className="w-[200px] text-xl py-6 bg-[rgb(88,148,3)] font-bold capitalize cursor-pointer" text="submit review " />
 

@@ -43,7 +43,7 @@ const header = () => {
                     <div className="relative">
                         <User onClick={() => setIsOpen(prev => !prev)} className="size-4 md:size-6" />
                         {isOpen &&
-                            <ul className="absolute top-11  bg-white shadow-2xl border-t  border-t-black w-[180px] z-20">
+                            <ul className="absolute top-11 -right-1 bg-white shadow-2xl border-t  border-t-black w-[180px] z-40">
                                 <li className="capitalize p-2  font-semibold text-base "><Link to="/login">login</Link></li>
                                 <li className="capitalize p-2 font-semibold text-base"><Link to="/register">create account</Link></li>
                                 <li className="capitalize p-2 font-semibold text-base"><Link to="wish-list">WhishList</Link></li>

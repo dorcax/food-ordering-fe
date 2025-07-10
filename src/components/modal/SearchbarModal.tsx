@@ -8,8 +8,8 @@ const SearchBarModal = () => {
     const { handleCloseModal } = useModal()
     return (
         <div className=" fixed inset-0 bg-[rgba(0,0,0,0.7)] flex justify-center items-center z-50 w-full">
-            <div className='w-full max-w-xl md:max-w-2xl lg:max-w-5xl rounded-xl shadow-2xl px-1 relative'>
-                <div className="fixed  md:top-0 md:right-0 cursor-pointer">
+            <div className='w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-5xl rounded-xl shadow-2xl px-1 relative'>
+                <div className="fixed top-[2%] right-[4%]  cursor-pointer">
                     <X onClick={handleCloseModal} className='size-8 text-white' /> </div>
 
                 <div className="relative">

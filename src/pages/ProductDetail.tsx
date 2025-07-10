@@ -52,7 +52,7 @@ const ProductDetail = () => {
         <span className='text-base'>Back to categories</span>
       </nav>
           <article className='flex justify-between flex-wrap  items-center md:mb-3'>
-            <h2 className='capitalize text-sm  md:text-lg'>China Town Chinese Food</h2>
+            <h2 className='capitalize text-sm  md:text-lg'>China Town </h2>
             <div className='cursor-pointer  flex flex-wrap space-x-2 items-center'>
               {
                 Array(5).fill(null).map((_, index) => (
@@ -78,9 +78,9 @@ const ProductDetail = () => {
         </div>
         {/* {image section} */}
 
-        <div className=' order-1 lg:order-2 sm:col-span-12 lg:col-span-7 flex flex-col md:flex-row pt-6 md:py-0 md:order-2 md:gap-4 md:mb-4'>
+        <div className=' order-1 lg:order-2 sm:col-span-12 lg:col-span-7 flex flex-col md:flex-row  md:py-0 md:order-2 md:gap-4 md:mb-4'>
         <div className='w-full md:col-span-10 lg:col-span-6 '>
-            <Carousel setApi={setApi} className="w-full max-w-3xl cursor-pointer">
+            <Carousel setApi={setApi} className="w-full max-w-2xl cursor-pointer">
             <CarouselContent>
               {/* {meals.slice(0,5).map((m) => ( */}
               {meals.slice(0, 5).map((meal) => (
@@ -89,7 +89,7 @@ const ProductDetail = () => {
                   <div className="">
                     <Card className='bg-transparent border-none overflow-hidden shadow-none p-0 '>
                       <CardContent className="flex  items-center w-full justify-center p-0">
-                        <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[450px] w-full  cursor-pointer'
+                        <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[250px] md:h-[350px] lg:h-[450px] w-full  cursor-pointer'
                         />
                       </CardContent>
                     </Card>
@@ -104,10 +104,10 @@ const ProductDetail = () => {
             <CarouselNext className='right-4' onClick={()=>api?.scrollTo(current+1)} />
           </Carousel>
         </div>
-            <div className='col-span-1 order-2 md:order-2 w-[420px] md:w-1/5  md:h-[400px] flex  sm:flex-row md:flex-col gap-6 md:gap-4 my-4 lg:my-0   overflow-auto mx-auto'>
+            <div className='col-span-1 order-2 md:order-2 w-[300px] sm:w-[420px] md:w-1/5  md:h-[300px] flex  sm:flex-row md:flex-col gap-6 md:gap-4 my-4 lg:my-0 overflow-auto mx-auto'>
           {meals.slice(0,5).map((meal,index)=>(
-            <div className='md:my-0 my-3 shrink-0 ' key={meal.id} onClick={()=>api?.scrollTo(index)}>
-                  <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[140px] w-[120px] cursor-pointer'/>
+            <div className='md:my-0 my-3 shrink-0 mx-auto ' key={meal.id} onClick={()=>api?.scrollTo(index)}>
+                  <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[80px] w-[80px] cursor-pointer'/>
                 </div>
           ))}
           {/* <Carousel

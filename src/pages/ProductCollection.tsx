@@ -20,7 +20,7 @@ const ProductCollection = () => {
     <section className='w-full min-h-screen overflow-hidden '>
       <BackToHome text="collection" />
       <section className='flex justify-center '>
-        <div className='w-[350px] h-screen hidden md:block border-r border-r-gray-400 '>
+        <div className=' w-[280px] lg:w-[350px] h-screen hidden md:block border-r border-r-gray-400 '>
           <h2 className='p-6 font-semibold text-2xl'>Filters</h2>
           <article className='p-4 relative'>
             
@@ -56,8 +56,10 @@ const ProductCollection = () => {
           </article>
         </div>
         <div className='flex-1'>
-          <div className='px-3 py-6 lg:p-6 flex sm:justify-between flex-end sm:items-center'>
-           <button className=' lg:hidden  border w-10 h-[40px] p-2 rounded-xl flex justify-center items-center'> <Settings2 className='size-8 '  /></button>
+        <div >
+         
+            <div className='px-3 py-6 lg:p-6 flex justify-between  gap-4 items-center'>
+           <button className=' md:hidden  border w-10 h-[40px] p-2 rounded-xl flex  justify-center items-center'> <Settings2 className='size-8 '  /></button>
             <p className='text-xl hidden  sm:block '>Home /
               Biggies Burger</p>
             <div className=''>
@@ -73,7 +75,9 @@ const ProductCollection = () => {
             </div>
               
           </div>
-          <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-6 pt-6 pb-10 px-4 md:p-4  '>
+           <div className=' block md:hidden border border-b-gray-400'/>
+        </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 pt-6 pb-10 px-4 md:p-4  '>
             {Array(5).fill(null).map((_, index) => (
               <div className='group relative ' key={index}>
                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="" className="object-cover w-full h-[160px] rounded-tr-xl rounded-tl-xl" />
@@ -99,7 +103,8 @@ const ProductCollection = () => {
         </div>
      
       </section>
-      <div className='border-b border-b-gray-400  w-full  absolute  top-[58%] md:top-[88%]' />
+    <div className="border-b border-gray-400 w-full absolute top-[72%] lg:top-[77%] hidden md:block" />
+
 
     </section>
   )

@@ -35,8 +35,8 @@ const Footer = () => {
                 </p>
 
                 <div className='relative my-6'>
-                    <Input className='max-w-lg md:max-w-sm py-6  h-[60px] border border-black rounded-l-xl  rounded-r-none  ' placeholder='Enter your email address '/>
-                    <Button className='absolute top-0 right-3  w-[180px] h-[60px] rounded-tl-none rounded-bl-none text-base inline-flex border '>Subscription <ArrowUpRight className='size-5' /></Button>
+                    <Input className='max-w-md sm:max-w-lg md:max-w-xl lg:max-w-sm py-6  h-[60px] border border-black rounded-l-xl  rounded-r-none  ' placeholder='Enter your email address '/>
+                    <Button className='absolute top-0 right-0 sm:right-3 md:right-0 w-[160px]  md:w-[200px] h-[60px] rounded-tl-none rounded-bl-none text-base inline-flex border '>Subscription <ArrowUpRight className='size-5' /></Button>
                 </div>
 
             </section>

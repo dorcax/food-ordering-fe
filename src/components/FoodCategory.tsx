@@ -14,13 +14,13 @@ const FoodCategory = () => {
     }
     return (
         <div className='flex flex-col justify-center items-center '>
-            <section className='max-w-4xl' >
+            <section className='' >
                 <h2 className='text-3xl md:text-5xl font-extrabold  text-center'>
                     <span className='text-[rgb(88,148,3)] leading-8'>Catering with the</span> first class  
-                    <span className='block mx-2'>service</span>
+                    <span className=' whitespace-nowrap sm:block mx-2'>service</span>
                 </h2>
                
-                 <p className='my-2.5 md:mt-7 text-[13px] md:text-lg  md:px-10'>Catering services can be tailored to accommodate a wide range of occasions, <br /> including weddings, corporate events, parties, conferences, and social gatherings.</p>
+                 <p className='my-2.5 md:mt-7 text-base md:text-lg  md:px-10'>Catering services can be tailored to accommodate a wide range of occasions, <br /> including weddings, corporate events, parties, conferences, and social gatherings.</p>
                
                 <section>
                     {meals.slice(0, 4).map((meal, index) => {
