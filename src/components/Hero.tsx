@@ -1,6 +1,6 @@
-import { MapPin, MoveRight, Star } from 'lucide-react'
-import { Button } from './ui/button'
+import { Star } from 'lucide-react'
 import MapinLocationButton from './MapinLocationButton'
+import { Button } from './ui/button'
 
 const Hero = () => {
     return (

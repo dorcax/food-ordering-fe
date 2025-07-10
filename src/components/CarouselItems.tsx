@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useModal } from "@/context/ModalProvider"
-import { ArrowLeftRight, Clock9, Eye, Heart, ShoppingBasket } from "lucide-react"
+import { ArrowLeftRight, Eye, Heart, ShoppingBasket } from "lucide-react"
 import { Link, useOutletContext } from "react-router-dom"
 import CartDetails from "./CartDetails"
 import FoodModal from "./modal/FoodModal"
@@ -27,7 +27,7 @@ type MealProps = {
 }
 
 export function CarouselDemo({ meals }: any) {
-  const date = new Date()
+
   const { handleOpenModal, handleOpenDrawer } = useModal()
   const { handleCompareProduct, handleWishList }: { handleCompareProduct: (meal: MealProps) => void, handleWishList: (meal: MealProps) => void } = useOutletContext()
 
