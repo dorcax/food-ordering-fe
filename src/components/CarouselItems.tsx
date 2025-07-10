@@ -49,12 +49,12 @@ export function CarouselDemo({ meals }: any) {
                   </Link>
 
                   <div className="absolute top-6 right-4 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-all z-20  ">
-                    <Button className="bg-[hsl(85,96%,30%)] w-[20px] h-[30px] cursor-pointer" onClick={() => handleWishList(meal)}>
-                      <Heart className="size-6" />
+                    <Button className="bg-[hsl(85,96%,30%)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleWishList(meal)}>
+                      <Heart className="size-5" />
                     </Button>
-                    <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleCompareProduct(meal)}> <ArrowLeftRight className="size-6" />
+                    <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleCompareProduct(meal)}> <ArrowLeftRight className="size-5" />
                     </Button>
-                    <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleOpenModal(<FoodModal />)}><Eye className="size-6" />
+                    <Button className="bg-[rgb(88,148,3)] w-[30px] h-[30px] cursor-pointer" onClick={() => handleOpenModal(<FoodModal />)}><Eye className="size-5" />
                     </Button>
                   </div>
                   {/* meal title and description */}
