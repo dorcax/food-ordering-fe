@@ -103,7 +103,7 @@ const ProductCollection = () => {
         </div>
      
       </section>
-    <div className="border-b border-gray-400 w-full absolute top-[72%] lg:top-[77%] hidden md:block" />
+    <div className="border-b border-gray-400 w-full absolute top-[72%] lg:top-[77%] xl:top-[78%]  hidden md:block" />
 
 
     </section>
