@@ -13,6 +13,7 @@ import { Link, useOutletContext } from "react-router-dom"
 import CartDetails from "./CartDetails"
 import FoodModal from "./modal/FoodModal"
 import { Button } from "./ui/button"
+import Reveal from "./Reveal"
 
 
 
@@ -36,8 +37,10 @@ export function CarouselDemo({ meals }: any) {
     <Carousel className="w-full my-6 md:my-8 ">
       <CarouselContent className="">
         {meals.map((meal: MealProps) => (
-          <CarouselItem key={meal.id} className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 relative ">
-            <div className="p-1">
+      
+           <CarouselItem key={meal.id} className="basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 relative ">
+       <Reveal>
+             <div className="p-1">
               <Card className="rounded-xl overflow-hidden shadow-md h-full p-0 ">
                 <CardContent className="p-0 flex flex-col w-full h-full group relative">
                   <Link to={`/product-detail/${meal.id}`}>
@@ -68,12 +71,16 @@ export function CarouselDemo({ meals }: any) {
                 </CardContent>
               </Card>
             </div>
+       </Reveal>
           </CarouselItem>
+        
         ))}
       </CarouselContent>
-      <div className="group">
+    <Reveal>
+        <div className="group">
         <CarouselPrevious className="bottom-0 opacity-0 group-hover:opacity-100" />
         <CarouselNext className="bottom-0 opacity-0 group-hover:opacity-100" /></div>
+    </Reveal>
     </Carousel>
   )
 }

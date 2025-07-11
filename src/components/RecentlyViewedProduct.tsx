@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel"
 import { meals } from "@/constant/data"
 import { Link } from "react-router-dom"
+import Reveal from "./Reveal"
 
 
 export function RecentlyViewedProduct() {
@@ -17,9 +18,9 @@ export function RecentlyViewedProduct() {
   
   return (
     <div className="my-6 lg:my-20">
-        <h2 className="text-3xl md:text-5xl font-bold py-2 capitalize">recently viewed products</h2>
+      <Reveal>  <h2 className="text-3xl md:text-5xl font-bold py-2 capitalize">recently viewed products</h2></Reveal>
         <Carousel className="w-full my-6">
-      <CarouselContent>
+     <Reveal> <CarouselContent>
         {meals.slice(0, 5).map((meal:any) =>(
           <CarouselItem key={meal.id} className="md:basis-1/2 lg:basis-1/4 relative ">
             <div className="p-1">
@@ -36,10 +37,10 @@ export function RecentlyViewedProduct() {
             </div>
           </CarouselItem>
         ))}
-      </CarouselContent>
-      <div className="group">
+      </CarouselContent></Reveal>
+     <Reveal> <div className="group">
         <CarouselPrevious className="bottom-0 opacity-0 group-hover:opacity-100" />
-        <CarouselNext className="bottom-0 opacity-0 group-hover:opacity-100" /></div>
+        <CarouselNext className="bottom-0 opacity-0 group-hover:opacity-100" /></div></Reveal>
     </Carousel>
     </div>
   )

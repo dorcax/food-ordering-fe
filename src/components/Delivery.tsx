@@ -8,21 +8,25 @@ import {
 import { ChevronRight } from "lucide-react"
 import { Link } from 'react-router-dom'
 import { Button } from "./ui/button"
+import Reveal from "./Reveal"
 const Delivery = () => {
   // const [activeItem,setActiveItem] =useState<number | null>(null)
   return (
     <section className='bg-[url("https://catering-workdo.myshopify.com/cdn/shop/files/category-back.jpg?v=1685364585")] bg-cover bg-center min-h-screen bg-no-repeat px-3 lg:px-14 py-20 mt-10'>
       {/* the delivery text */}
-      <div className='max-w-[760px]'>
+     <Reveal>
+       <div className='max-w-[760px]'>
         <h2 className='text-[34px] font-bold  text-[rgb(88,148,3)] capitalize mb-1 '>delivery.</h2>
         <h4 className='text-white text-5xl font-extrabold py-3 leading-14'>The catering with <br /> <span className='text-[hsl(85,96%,30%)]'>the royal touch</span>
         </h4>
         <p className='text-white  text-lg font-medium leading-relaxed py-6'>Experience a gastronomic adventure like no other with our bespoke catering, showcasing the perfect harmony of taste, presentation, and ambiance.Treat your guests to a sensory feast with our catering expertise, where each dish is crafted with precision and infused with culinary magic.</p>
       </div>
+     </Reveal>
       {/*  carosuel  */}
       <Carousel className='max-w-3xl my-2'>
       <div>
-          <CarouselContent className='w-full '>
+         <Reveal>
+           <CarouselContent className='w-full '>
           {Array(5).fill(null).map((_, index) => (
             <CarouselItem className=" basis-full sm:basis-1/2 md:basis-1/3   text-white group  relative " >
               <Link to={`/category/${index}`}>
@@ -39,6 +43,7 @@ const Delivery = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+         </Reveal>
       </div>
 
         <div className="pointer-events-none group">

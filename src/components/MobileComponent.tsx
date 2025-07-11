@@ -5,9 +5,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-const SideBar = () => {
+const SideBar = ({toggleMenu}:{toggleMenu:boolean}) => {
     return (
-        <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] z-40 flex">
+        <div className={`fixed inset-0 bg-[rgba(0,0,0,0.6)] z-40 flex transform transition-transform duration-150  ease-in-out${toggleMenu ?"translate-x-0":"-translate-x-full"}`}>
             {/* Left transparent space */}
             <div className="w-[100px] md:w-[400px]"></div>
             {/* Green background drawer */}

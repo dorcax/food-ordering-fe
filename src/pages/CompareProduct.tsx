@@ -4,6 +4,7 @@ import { Trash } from 'lucide-react'
 import { useOutletContext } from 'react-router-dom'
 import type { MealProps } from './Landing'
 import WishListSubList from './WishListSubList'
+import Reveal from '@/components/Reveal'
 
 const CompareProduct = () => {
     const { selectedMeal }: { selectedMeal: MealProps[] } = useOutletContext()
@@ -12,8 +13,11 @@ const CompareProduct = () => {
           <BackToHome text="compare"/>
             {/* listing the selected product */}
             <section className='px-3 lg:px-14 py-6'>
-                <h2 className='text-center text-4xl capitalize font-bold '>compare product</h2>
-                <table className=' w-full my-10 hidden md:table'>
+              <Reveal>
+                  <h2 className='text-center text-4xl capitalize font-bold '>compare product</h2>
+              </Reveal>
+         <Reveal>
+                   <table className=' w-full my-10 hidden md:table'>
                      <colgroup>
                         <col className="w-[300px]" />
                         <col className="w-[40%]" />
@@ -49,6 +53,7 @@ const CompareProduct = () => {
 
                     </tbody>
                 </table>
+         </Reveal>
                 <WishListSubList/>
             </section>
         </section>

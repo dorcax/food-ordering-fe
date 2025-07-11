@@ -9,11 +9,12 @@ import { useModal } from "@/context/ModalProvider"
 import { Menu, Search, ShoppingCart, User, X } from "lucide-react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import CartDetails from "./CartDetails"
 import SideBar from "./MobileComponent"
 import SearchBarModal from "./modal/SearchbarModal"
 import NavItem from "./NavItems"
+import Reveal from "./Reveal"
 import { Button } from "./ui/button"
-import CartDetails from "./CartDetails"
 
 
 
@@ -26,11 +27,14 @@ const header = () => {
     const { handleOpenModal } = useModal()
     return (
         <section>
-            <div className='bg-[rgb(88,148,3)] text-center capitalize py-3 text-white text-base hidden md:block'>
+      <Reveal>
+              <div className='bg-[rgb(88,148,3)] text-center capitalize py-3 text-white text-base hidden md:block'>
                 <p>subscribe to our newsletter and recieve a 10% discount on your first service.</p>
             </div>
+      </Reveal>
             {/* logo and navigation */}
-            <header className='flex justify-between items-center  px-3 xl:px-14 border-b h-[80px] shadow-5xl'>
+        <Reveal>
+                <header className='flex justify-between items-center  px-3 xl:px-14 border-b h-[80px] shadow-5xl'>
                 <div className='flex space-x-4 items-center w-full'>
                     <h2 className='text-black font-extrabold text-3xl'><Link to="/">catering</Link></h2>
                     <ul className='lg:flex items-center space-x-4 text-black cursor-pointer z-50 hidden group '>
@@ -93,10 +97,11 @@ const header = () => {
                     {/* menu icon for mobile */}
                     <button type="button" className="block lg:hidden ">{toggleMenu ? <X onClick={() => setToggleMenu(false)} className="size-8 fixed left-32 md:left-[50%]  right-0 top-2 z-50 text-white" /> : <Menu className="size-6" onClick={() => setToggleMenu(prev => !prev)} />}</button>
 
-                    {toggleMenu && <SideBar/>}
+                    {toggleMenu && <SideBar toggleMenu={toggleMenu} />}
 
                 </div>
-            </header>
+            </header> 
+        </Reveal>
         </section>
     )
 }

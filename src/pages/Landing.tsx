@@ -3,8 +3,6 @@ import Header from '@/components/Header'
 import { useState } from 'react'
 import { Outlet, useNavigate } from "react-router-dom"
 
-
-
 export type MealProps = {
     imageUrl: string
     title: string
@@ -53,7 +51,9 @@ const Landing = () => {
 
     }
     return (
-        <section className='flex flex-col min-h-screen '>
+        <section className='flex flex-col min-h-screen '
+      
+      >
             <Header />
             <main className='flex-1 '>
                 <Outlet context={{ selectedMeal, handleCompareProduct,handleWishList }} />

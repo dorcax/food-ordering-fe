@@ -1,6 +1,7 @@
 import BackToHome from '@/components/BackToHome'
 import CartDetails from '@/components/CartDetails'
 import FoodModal from '@/components/modal/FoodModal'
+import Reveal from '@/components/Reveal'
 import { Button } from '@/components/ui/button'
 import { useModal } from '@/context/ModalProvider'
 import { ArrowLeftRight, Eye, Heart, Minus, Plus, Settings2 } from 'lucide-react'
@@ -19,19 +20,22 @@ const ProductCollection = () => {
   return (
     <section className='w-full min-h-screen overflow-hidden '>
       <BackToHome text="collection" />
-      <section className='flex justify-center '>
-        <div className=' w-[280px] lg:w-[350px] h-screen hidden md:block border-r border-r-gray-400 '>
-          <h2 className='p-6 font-semibold text-2xl'>Filters</h2>
+      <section className='flex justify-center  '>
+        <div className=' w-[280px] lg:w-[350px] h-screen hidden md:block border-r border-r-gray-400  '>
+      <Reveal>   <div className='border border-b-gray-400 p-[28px] lg:p-[27px]'> <h2 className=' font-semibold text-2xl'>Filters</h2></div></Reveal>
           <article className='p-4 relative'>
             
-            <div className='flex justify-between items-center cursor-pointer' onClick={handleChange}>
+          <Reveal>
+              <div className='flex justify-between items-center cursor-pointer' onClick={handleChange}>
               <p className='font-medium text-xl'>Availability</p>
               <span>
                 {isActive ? <Minus className='size-5' /> : <Plus className='size-5' />}
               </span>
             </div>
+          </Reveal>
             {isActive && (
-              <div>
+           <Reveal>
+               <div>
               <div className='flex  justify-between items-center my-4 font-medium'>
                 <span>0 Selected</span>
                 <span>Reset</span>
@@ -52,14 +56,16 @@ const ProductCollection = () => {
                   <span>(0)</span>
                 </div>
               </div></div>
+           </Reveal>
             )}
           </article>
         </div>
         <div className='flex-1'>
         <div >
-         
-            <div className='px-3 py-6 lg:p-6 flex justify-between  gap-4 items-center'>
-           <button className=' md:hidden  border w-10 h-[40px] p-2 rounded-xl flex  justify-center items-center'> <Settings2 className='size-8 '  /></button>
+         <Reveal>
+          
+            <div className='px-3 py-6 lg:p-6 flex justify-between  gap-4 items-center border border-b-gray-400'>
+           <button className=' md:hidden  border w-10 h-[40px] p-2 rounded-xl flex  justify-center items-center '> <Settings2 className='size-8 '  /></button>
             <p className='text-xl hidden  sm:block '>Home /
               Biggies Burger</p>
             <div className=''>
@@ -75,11 +81,12 @@ const ProductCollection = () => {
             </div>
               
           </div>
-           <div className=' block md:hidden border border-b-gray-400'/>
+         </Reveal>
+           {/* <div className=' block md:hidden '/> */}
         </div>
           <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 gap-6 pt-6 pb-10 px-4 md:p-4  '>
             {Array(5).fill(null).map((_, index) => (
-              <div className='group relative ' key={index}>
+          <Reveal>    <div className='group relative ' key={index}>
                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="" className="object-cover w-full h-[160px] rounded-tr-xl rounded-tl-xl" />
                 <div className="absolute top-2 right-3 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-all z-10  ">
                   <Button className="bg-[hsl(85,96%,30%)] w-[30px] cursor-pointer" ><Heart className="size-6" />
@@ -96,14 +103,14 @@ const ProductCollection = () => {
                   <Button className="w-full bg-[rgb(88,148,3)] py-5 text-base" onClick={() => handleOpenDrawer(<CartDetails />)}>Add to Cart
                   </Button>
                 </div>
-              </div>
+              </div></Reveal>
             ))}
           </div>
 
         </div>
      
       </section>
-    <div className="border-b border-gray-400 w-full absolute top-[72%] lg:top-[77%] xl:top-[78%]  hidden md:block" />
+    {/* <div className="border-b border-gray-400 w-full absolute top-[72%] lg:top-[77%] xl:top-[78%]  hidden md:block" /> */}
 
 
     </section>

@@ -1,10 +1,12 @@
+import Reveal from '@/components/Reveal'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
 const Login = () => {
   return (
     <section className='flex flex-col justify-center items-center py-10 m-3  '>
-     <div className='w-full max-w-xl border'>
+     <Reveal>
+      <div className='w-full max-w-xl border'>
        <div className='flex flex-col my-6 justify-center items-center'>
         <h2 className=' capitalize text-2xl font-bold'>welcome back</h2>
        <p>welcome back please enter your details</p>
@@ -26,6 +28,7 @@ const Login = () => {
      </div>
       </form>
      </div>
+     </Reveal>
     </section>
   )
 }
