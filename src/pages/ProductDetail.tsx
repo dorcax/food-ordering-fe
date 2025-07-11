@@ -113,20 +113,22 @@ const ProductDetail = () => {
             <CarouselNext className='right-4' onClick={()=>api?.scrollTo(current+1)} /></Reveal>
           </Carousel>
         </div>
+         <Reveal>
+             <div className='col-span-1 order-2 md:order-2 w-[300px] sm:w-[420px] md:w-1/5  md:h-[300px] flex  sm:flex-row md:flex-col gap-6  md:gap-4 my-4 lg:my-0 overflow-auto mx-auto'>
         
-             <div className='col-span-1 order-2 md:order-2 w-[300px] sm:w-[420px] md:w-1/5  md:h-[300px] flex  sm:flex-row md:flex-col gap-6 md:gap-4 my-4 lg:my-0 overflow-auto mx-auto'>
-          <div className=''>
-            <Reveal>
+           
               {meals.slice(0,5).map((meal,index)=>(
+
             <div className='md:my-0 my-3 shrink-0 mx-auto py-2' key={meal.id} onClick={()=>api?.scrollTo(index)}>
                   <img src={meal.imageUrl} alt="product image" className='object-cover rounded-lg h-[80px] w-[80px] cursor-pointer'/>
                 </div>
+                    
           ))}
-            </Reveal>
-          </div>
+       
+     
         
         </div>
-          
+           </Reveal>
         </div>
     
       </section>
