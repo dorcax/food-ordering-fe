@@ -78,13 +78,14 @@ const Services = () => {
             }}
             className="w-full max-w-xl md:max-w-5xl "
           >
-          <Reveal>
+          
               <CarouselContent>
               {cateringServices.map((services: ServicesType) => (
                 <CarouselItem key={services.id} className=" basis-full sm:basis-1/2 lg:basis-1/3" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                   <div className="p-1">
+                    <Reveal>
                     <Card className='border border-[rgb(88,148,3)]'>
-                      <CardContent className=" px-6 ">
+                      <CardContent className=" px-6  " >
                         <img src={services.imageUrl} alt="" className='object-cover w-[60px] h-[60px] rounded-full ' />
                         {/* <p>{services.rating}</p> */}
                         <div className=' mt-4 w-full'>
@@ -96,11 +97,12 @@ const Services = () => {
 
                       </CardContent>
                     </Card>
+                    </Reveal>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-          </Reveal>
+          
             {isHovered && (<Reveal>
               <><CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10" />
               <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10" /></>
